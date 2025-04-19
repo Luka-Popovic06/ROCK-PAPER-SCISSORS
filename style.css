@@ -43,11 +43,12 @@ h1 {
 }
 /*MAIN*/
 main {
-  margin-top: 150px;
+  margin-top: 50px;
   justify-items: center;
+  align-content: center;
   position: relative;
-  width: 350px;
-  height: 320px;
+  width: 450px;
+  height: 420px;
 }
 .container {
   justify-items: center;
@@ -63,14 +64,16 @@ main {
   border: 15px solid #ff0000;
   border-radius: 50%;
   position: absolute;
-  bottom: 10px;
-  left: 100px;
+  bottom: 35px;
+  left: 155px;
   box-shadow: 0px 7px 0px 0px rgba(255, 0, 0, 0.578);
   cursor: pointer;
 }
 #rock:hover {
-  width: 137px;
-  height: 137px;
+  width: 140px;
+  height: 140px;
+  bottom: 30px;
+  left: 150px;
 }
 #paper {
   border: 15px solid #002aff;
@@ -79,14 +82,16 @@ main {
   height: 130px;
   border-radius: 50%;
   position: absolute;
-  left: -25px;
-  top: -35px;
+  left: 0px;
+  top: 0px;
   box-shadow: 0px 7px 0px 0px #002aff98;
   cursor: pointer;
 }
 #paper:hover {
-  width: 137px;
-  height: 137px;
+  width: 140px;
+  height: 140px;
+  left: -5px;
+  top: -5px;
 }
 #scissors {
   border: 15px solid #ffc800;
@@ -95,12 +100,14 @@ main {
   width: 130px;
   height: 130px;
   position: absolute;
-  right: -25px;
-  top: -35px;
+  right: 0px;
+  top: 0px;
   box-shadow: 0px 7px 0px 0px #ffc800c3;
   cursor: pointer;
 }
 #scissors:hover {
-  width: 137px;
-  height: 137px;
+  width: 140px;
+  height: 140px;
+  right: -5px;
+  top: -5px;
 }
