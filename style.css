@@ -2,3 +2,42 @@
   margin: 0;
   padding: 0;
 }
+body {
+  font-family: sans-serif;
+  background: radial-gradient(circle, #1f3756 0%, #141539 100%);
+  justify-items: center;
+}
+header {
+  margin-top: 20px;
+  width: 620px;
+  height: 110px;
+  border: 3px solid #9d9d9d;
+  border-radius: 7px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+h1 {
+  font-size: 33px;
+  font-weight: 800;
+  color: #fff;
+}
+.score-box {
+  height: 100px;
+  width: 110px;
+  background-color: #fff;
+  border-radius: 5px;
+  justify-items: center;
+  align-content: center;
+}
+#score {
+  color: #443994;
+  font-weight: 500;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+#score-number {
+  font-size: 40px;
+  font-weight: 600;
+  color: #9d9d9d;
+}
