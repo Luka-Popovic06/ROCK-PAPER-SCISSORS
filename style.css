@@ -41,3 +41,66 @@ h1 {
   font-weight: 600;
   color: #9d9d9d;
 }
+/*MAIN*/
+main {
+  margin-top: 150px;
+  justify-items: center;
+  position: relative;
+  width: 350px;
+  height: 320px;
+}
+.container {
+  justify-items: center;
+}
+#trougao {
+  width: 350px;
+  height: 300px;
+}
+#rock {
+  background-color: #fff;
+  width: 130px;
+  height: 130px;
+  border: 15px solid #ff0000;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 100px;
+  box-shadow: 0px 7px 0px 0px rgba(255, 0, 0, 0.578);
+  cursor: pointer;
+}
+#rock:hover {
+  width: 137px;
+  height: 137px;
+}
+#paper {
+  border: 15px solid #002aff;
+  background-color: #fff;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: absolute;
+  left: -25px;
+  top: -35px;
+  box-shadow: 0px 7px 0px 0px #002aff98;
+  cursor: pointer;
+}
+#paper:hover {
+  width: 137px;
+  height: 137px;
+}
+#scissors {
+  border: 15px solid #ffc800;
+  border-radius: 50%;
+  background-color: #fff;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  right: -25px;
+  top: -35px;
+  box-shadow: 0px 7px 0px 0px #ffc800c3;
+  cursor: pointer;
+}
+#scissors:hover {
+  width: 137px;
+  height: 137px;
+}
