@@ -111,3 +111,19 @@ main {
   right: -5px;
   top: -5px;
 }
+#btn-rules {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: 2px solid #443994;
+  color: #443994;
+  background-color: #1f3756;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 10px;
+  transition: 0.2s;
+}
+#btn-rules:hover {
+  background-color: #ffffffbb;
+  transition: 0.2s;
+}
