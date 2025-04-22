@@ -225,3 +225,31 @@ h3 {
 .img-rock-2 {
   width: 70px;
 }
+.box-2 {
+  position: absolute;
+  justify-items: center;
+  top: 40%;
+  left: 40%;
+}
+#result {
+  color: #fff;
+  font-size: 33px;
+  font-weight: 900;
+}
+#btn-again {
+  margin-top: 10px;
+  padding: 10px 23px;
+  background-color: #fff;
+  border: 2px solid #443994;
+  color: #443994;
+  font-size: 13px;
+  font-weight: 900;
+  border-radius: 7px;
+  cursor: pointer;
+}
+#btn-again:hover {
+  background-color: #ffffffd1;
+}
+.hidden {
+  display: none;
+}
