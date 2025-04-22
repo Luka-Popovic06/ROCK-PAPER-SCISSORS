@@ -111,7 +111,7 @@ main {
   right: -5px;
   top: -5px;
 }
-#btn-rules {
+.btn-rules {
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -123,7 +123,7 @@ main {
   margin-top: 10px;
   transition: 0.2s;
 }
-#btn-rules:hover {
+.btn-rules:hover {
   background-color: #ffffffbb;
   transition: 0.2s;
 }

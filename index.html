@@ -19,7 +19,7 @@
           <p id="score-number">0</p>
         </div>
       </header>
-      <main>
+      <main class="hidden">
         <img id="trougao" src="trougao.svg" alt="trougao" />
         <div class="paper-scissors">
           <button id="paper"><img src="paper.svg" alt="paper" /></button>
@@ -29,7 +29,41 @@
         </div>
         <button id="rock"><img src="rock.svg" alt="rock" /></button>
       </main>
-      <button id="btn-rules">RULES</button>
+      <button class="btn-rules hidden">RULES</button>
+      <div class="mini-box">
+        <div>
+          <h3>YOU PICKED <span>scissors</span></h3>
+          <div class="box-1">
+            <button class="paper-1">
+              <img class="img-paper" src="paper.svg" alt="paper" />
+            </button>
+            <button class="scissors-1">
+              <img class="img-scissors" src="scissors.svg" alt="scissors" />
+            </button>
+            <button class="rock-1">
+              <img class="img-rock" src="rock.svg" alt="rock" />
+            </button>
+          </div>
+        </div>
+        <div class="box-2">
+          <p id="result">YOU WIN</p>
+          <button id="btn-again">PLAY AGAIN</button>
+        </div>
+        <div>
+          <h3>COMPUTER PICKED <span>SCISSORS</span></h3>
+          <div class="box-3">
+            <button class="paper-2">
+              <img class="img-paper-2" src="paper.svg" alt="paper" />
+            </button>
+            <button class="scissors-2">
+              <img class="img-scissors-2" src="scissors.svg" alt="scissors" />
+            </button>
+            <button class="rock-2">
+              <img class="img-rock-2" src="rock.svg" alt="rock" />
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
     <script src="script.js"></script>
   </body>
