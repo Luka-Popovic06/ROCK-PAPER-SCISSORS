@@ -183,3 +183,45 @@ h3 {
 .img-rock {
   width: 70px;
 }
+.paper-2 {
+  border: 20px solid #002aff;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  box-shadow: 0px 7px 0px 0px #002aff98;
+}
+.img-paper-2 {
+  width: 70px;
+}
+.scissors-2 {
+  border: 20px solid #ffc800;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  box-shadow: 0px 7px 0px 0px #ffc800c3;
+}
+.img-scissors-2 {
+  width: 70px;
+}
+.rock-2 {
+  border: 20px solid #ff0000;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 20%;
+  box-shadow: 0px 7px 0px 0px rgba(255, 0, 0, 0.578);
+}
+.img-rock-2 {
+  width: 70px;
+}
