@@ -127,3 +127,17 @@ main {
   background-color: #ffffffbb;
   transition: 0.2s;
 }
+.mini-box {
+  margin-top: 50px;
+  position: relative;
+  width: 650px;
+  height: 420px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+h3 {
+  color: white;
+  margin-left: 20px;
+  font-size: 15px;
+}
