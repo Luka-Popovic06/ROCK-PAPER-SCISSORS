@@ -104,3 +104,14 @@ function hidden() {
   miniBox.classList.remove('hidden');
   computerText.classList.remove('hidden');
 }
+function chosingWiner() {
+  if (computerValue > playerValue) {
+    result.textContent = 'YOU LOSE';
+    backgroundColor(computerPaper, computerScissors, computerRock);
+  } else if (computerValue < playerValue) {
+    result.textContent = 'YOU WIN';
+    backgroundColor(youPickedPaper, youPickedRock, youPickedScissors);
+  } else if (computerValue === playerValue) {
+    result.textContent = 'DRAW';
+  }
+}
