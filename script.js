@@ -80,3 +80,21 @@ btnRock.addEventListener('click', function () {
   valueOfPlayer('Rock');
 });
 //
+function valueOfComputer() {
+  if (random === 'ROCK') {
+    rockValue = 2;
+    scissorsValuePlayer = scissorsValuePlayer - 1;
+    paperValuePlayer = paperValuePlayer + 1;
+    computerValue = rockValue;
+  } else if (random === 'PAPER') {
+    paperValue = 2;
+    scissorsValuePlayer = scissorsValue + 1;
+    rockValuePlayer--;
+    computerValue = paperValue;
+  } else if (random === 'SCISSORS') {
+    scissorsValue = 2;
+    paperValuePlayer--;
+    rockValuePlayer = rockValuePlayer + 1;
+    computerValue = scissorsValue;
+  }
+}
