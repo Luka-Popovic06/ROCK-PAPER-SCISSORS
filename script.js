@@ -49,3 +49,18 @@ btnPaper.addEventListener('click', function () {
   valueOfComputer();
   valueOfPlayer('Paper');
 });
+btnScissors.addEventListener('click', function () {
+  hidden();
+  youPickedScissors.classList.remove('hidden');
+  youPickedText.textContent = 'SCISSORS';
+  interval = setInterval(function () {
+    timer();
+    if (seconds === 0) {
+      clearInterval(interval);
+      chosingWiner();
+      scoring();
+    }
+  }, 1000);
+  valueOfComputer();
+  valueOfPlayer('Scissors');
+});
