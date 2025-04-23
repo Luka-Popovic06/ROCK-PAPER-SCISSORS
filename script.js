@@ -33,3 +33,19 @@ let scissorsValuePlayer = 2;
 let computerValue;
 let playerValue;
 let interval;
+
+btnPaper.addEventListener('click', function () {
+  hidden();
+  youPickedPaper.classList.remove('hidden');
+  youPickedText.textContent = 'PAPER';
+  interval = setInterval(function () {
+    timer();
+    if (seconds === 0) {
+      clearInterval(interval);
+      chosingWiner();
+      scoring();
+    }
+  }, 1000);
+  valueOfComputer();
+  valueOfPlayer('Paper');
+});
