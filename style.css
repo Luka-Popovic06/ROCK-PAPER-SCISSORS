@@ -36,7 +36,7 @@ h1 {
   font-size: 22px;
   margin-bottom: 10px;
 }
-#score-number {
+.score-number {
   font-size: 40px;
   font-weight: 600;
   color: #9d9d9d;
@@ -225,11 +225,22 @@ h3 {
 .img-rock-2 {
   width: 70px;
 }
+.time {
+  align-content: center;
+  background-color: #ebedeee2;
+  padding: 60px 80px;
+  font-size: 70px;
+  border-radius: 50%;
+  position: absolute;
+  right: 1px;
+  top: 20%;
+  background: radial-gradient(circle, #104a96 10%, #fff 97%);
+}
 .box-2 {
   position: absolute;
   justify-items: center;
   top: 40%;
-  left: 40%;
+  left: 37%;
 }
 #result {
   color: #fff;
