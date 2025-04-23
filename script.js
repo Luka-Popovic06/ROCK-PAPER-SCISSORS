@@ -98,3 +98,9 @@ function valueOfComputer() {
     computerValue = scissorsValue;
   }
 }
+function hidden() {
+  main.classList.add('hidden');
+  btnRules.classList.add('hidden');
+  miniBox.classList.remove('hidden');
+  computerText.classList.remove('hidden');
+}
