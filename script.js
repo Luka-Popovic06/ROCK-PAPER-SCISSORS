@@ -64,3 +64,19 @@ btnScissors.addEventListener('click', function () {
   valueOfComputer();
   valueOfPlayer('Scissors');
 });
+btnRock.addEventListener('click', function () {
+  hidden();
+  youPickedRock.classList.remove('hidden');
+  youPickedText.textContent = 'ROCK';
+  interval = setInterval(function () {
+    timer();
+    if (seconds === 0) {
+      clearInterval(interval);
+      chosingWiner();
+      scoring();
+    }
+  }, 1000);
+  valueOfComputer();
+  valueOfPlayer('Rock');
+});
+//
