@@ -6,9 +6,10 @@ body {
   font-family: sans-serif;
   background: radial-gradient(circle, #1f3756 0%, #141539 100%);
   justify-items: center;
+  position: relative;
 }
 header {
-  margin-top: 20px;
+  margin-top: px;
   width: 620px;
   height: 110px;
   border: 3px solid #9d9d9d;
@@ -52,6 +53,7 @@ main {
 }
 .container {
   justify-items: center;
+  padding: 20px;
 }
 #trougao {
   width: 350px;
@@ -144,8 +146,8 @@ h3 {
 .paper-1 {
   border: 20px solid #002aff;
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   position: absolute;
   left: 0;
@@ -158,8 +160,8 @@ h3 {
 .scissors-1 {
   border: 20px solid #ffc800;
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   position: absolute;
   left: 0;
@@ -172,8 +174,8 @@ h3 {
 .rock-1 {
   border: 20px solid #ff0000;
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   position: absolute;
   left: 0;
@@ -186,8 +188,8 @@ h3 {
 .paper-2 {
   border: 20px solid #002aff;
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -200,8 +202,8 @@ h3 {
 .scissors-2 {
   border: 20px solid #ffc800;
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -214,8 +216,8 @@ h3 {
 .rock-2 {
   border: 20px solid #ff0000;
   background-color: #fff;
-  width: 200px;
-  height: 200px;
+  width: 210px;
+  height: 210px;
   border-radius: 50%;
   position: absolute;
   right: 0;
@@ -232,7 +234,7 @@ h3 {
   font-size: 70px;
   border-radius: 50%;
   position: absolute;
-  right: 1px;
+  right: 5px;
   top: 20%;
   background: radial-gradient(circle, #104a96 10%, #fff 97%);
 }
@@ -240,11 +242,11 @@ h3 {
   position: absolute;
   justify-items: center;
   top: 40%;
-  left: 37%;
+  left: 40%;
 }
 #result {
   color: #fff;
-  font-size: 33px;
+  font-size: 27px;
   font-weight: 900;
 }
 #btn-again {
@@ -260,6 +262,42 @@ h3 {
 }
 #btn-again:hover {
   background-color: #ffffffd1;
+}
+.modal {
+  width: 370px;
+  height: 370px;
+  background-color: #fff;
+  justify-items: center;
+  padding: 40px;
+  position: absolute;
+  top: 25%;
+  left: 34.7%;
+  border-radius: 20px;
+}
+#modal-minibox {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  width: 100%;
+}
+#modal-paragraf {
+  font-weight: 900;
+  font-size: 27px;
+  color: #a0a0a0;
+}
+#btn-out {
+  background-color: white;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  background-color: #88888854;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .hidden {
   display: none;
