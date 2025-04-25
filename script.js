@@ -31,7 +31,7 @@ let interval;
 let playerChoice = '';
 let computerChoice = ruka[Math.trunc(Math.random() * 3) + 0];
 
-function chosingWiner() {
+function choosingWiner() {
   if (playerChoice === 'PAPER' && computerChoice === 'ROCK') {
     resultScore = 'YOU WIN';
     result.textContent = resultScore;
@@ -66,4 +66,56 @@ function chosingWiner() {
     result.textContent = resultScore;
     backgroundColor(computerPaper, computerScissors, computerRock);
   }
+}
+btnPaper.addEventListener('click', function () {
+  playerChoice = 'PAPER';
+  hidden();
+  youPickedPaper.classList.remove('hidden');
+  youPickedText.textContent = 'PAPER';
+  interval = setInterval(function () {
+    timer();
+    if (seconds === 0) {
+      clearInterval(interval);
+      choosingWiner();
+      scoring();
+    }
+  }, 1000);
+});
+btnScissors.addEventListener('click', function () {
+  playerChoice = 'SCISSORS';
+  hidden();
+  youPickedScissors.classList.remove('hidden');
+  youPickedText.textContent = 'SCISSORS';
+  interval = setInterval(function () {
+    timer();
+    if (seconds === 0) {
+      clearInterval(interval);
+      choosingWiner();
+      scoring();
+    }
+  }, 1000);
+});
+btnRock.addEventListener('click', function () {
+  playerChoice = 'ROCK';
+  hidden();
+  youPickedRock.classList.remove('hidden');
+  youPickedText.textContent = 'ROCK';
+  interval = setInterval(function () {
+    timer();
+    if (seconds === 0) {
+      clearInterval(interval);
+      choosingWiner();
+      scoring();
+    }
+  }, 1000);
+});
+btnRules.addEventListener('click', ruless);
+btnOut.addEventListener('click', close);
+function ruless() {
+  modal.classList.remove('hidden');
+  background.classList.remove('hidden');
+}
+function close() {
+  modal.classList.add('hidden');
+  background.classList.add('hidden');
 }
