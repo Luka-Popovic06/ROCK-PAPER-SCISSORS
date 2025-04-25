@@ -119,3 +119,25 @@ function close() {
   modal.classList.add('hidden');
   background.classList.add('hidden');
 }
+function hidden() {
+  main.classList.add('hidden');
+  btnRules.classList.add('hidden');
+  miniBox.classList.remove('hidden');
+  computerText.classList.remove('hidden');
+}
+function scoring() {
+  if (resultScore === 'YOU LOSE') {
+    scoreNumber = scoreNumber - 1;
+    score.textContent = scoreNumber;
+  } else if (resultScore === 'YOU WIN') {
+    scoreNumber = scoreNumber + 1;
+    score.textContent = scoreNumber;
+  } else {
+    score.textContent = scoreNumber;
+  }
+}
+function backgroundColor(btnWinOne, btnWinTwo, btnWinerThree) {
+  btnWinOne.style.boxShadow = '0px 0px 20px 20px  #fff';
+  btnWinTwo.style.boxShadow = '0px 0px 20px 20px  #fff';
+  btnWinerThree.style.boxShadow = '0px 0px 30px 20px  #fff';
+}
