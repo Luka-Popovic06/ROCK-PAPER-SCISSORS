@@ -141,3 +141,8 @@ function backgroundColor(btnWinOne, btnWinTwo, btnWinerThree) {
   btnWinTwo.style.boxShadow = '0px 0px 20px 20px  #fff';
   btnWinerThree.style.boxShadow = '0px 0px 30px 20px  #fff';
 }
+function backgroundColorRemove(btnWinOne, btnWinTwo, btnWinerThree) {
+  btnWinOne.style.boxShadow = 'none';
+  btnWinTwo.style.boxShadow = 'none';
+  btnWinerThree.style.boxShadow = 'none';
+}
