@@ -146,3 +146,18 @@ function backgroundColorRemove(btnWinOne, btnWinTwo, btnWinerThree) {
   btnWinTwo.style.boxShadow = 'none';
   btnWinerThree.style.boxShadow = 'none';
 }
+function timer() {
+  seconds--;
+  computerTime.textContent = seconds;
+  if (seconds === 0) {
+    if (computerChoice === 'SCISSORS') {
+      computerScissors.classList.remove('hidden');
+    } else if (computerChoice === 'PAPER') {
+      computerPaper.classList.remove('hidden');
+    } else if (computerChoice === 'ROCK') {
+      computerRock.classList.remove('hidden');
+    }
+    youPickedTextTwo.textContent = computerChoice;
+  }
+}
+btnAgain.addEventListener('click', again);
