@@ -172,3 +172,15 @@ function again() {
   backgroundColorRemove(computerPaper, computerScissors, computerRock);
   backgroundColorRemove(youPickedPaper, youPickedRock, youPickedScissors);
 }
+function hiddenAgain() {
+  main.classList.remove('hidden');
+  btnRules.classList.remove('hidden');
+  miniBox.classList.add('hidden');
+  computerText.classList.add('hidden');
+  computerScissors.classList.add('hidden');
+  computerRock.classList.add('hidden');
+  computerPaper.classList.add('hidden');
+  youPickedRock.classList.add('hidden');
+  youPickedPaper.classList.add('hidden');
+  youPickedScissors.classList.add('hidden');
+}
