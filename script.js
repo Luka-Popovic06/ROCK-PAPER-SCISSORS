@@ -161,3 +161,14 @@ function timer() {
   }
 }
 btnAgain.addEventListener('click', again);
+function again() {
+  resultScore = '';
+  hiddenAgain();
+  computerChoice = ruka[Math.trunc(Math.random() * 3) + 0];
+  result.textContent = '...';
+  seconds = 4;
+  youPickedTextTwo.textContent = '...';
+  timer();
+  backgroundColorRemove(computerPaper, computerScissors, computerRock);
+  backgroundColorRemove(youPickedPaper, youPickedRock, youPickedScissors);
+}
