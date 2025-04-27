@@ -132,7 +132,10 @@ function increaseScore() {
   scoreNumber = scoreNumber + 1;
   score.textContent = scoreNumber;
 }
-
+function reducingScore() {
+  scoreNumber = scoreNumber - 1;
+  score.textContent = scoreNumber;
+}
 function backgroundColor(btnWinOne, btnWinTwo, btnWinerThree) {
   btnWinOne.style.boxShadow = '0px 0px 20px 20px  #fff';
   btnWinTwo.style.boxShadow = '0px 0px 20px 20px  #fff';
