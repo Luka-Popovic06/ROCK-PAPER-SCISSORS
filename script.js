@@ -33,19 +33,20 @@ let computerChoice = ruka[Math.trunc(Math.random() * 3) + 0];
 
 const btnPlayer = document.querySelectorAll('.btn-player');
 
-btnPlayer.forEach(function (btnId) {
-  btnId.addEventListener('click', function () {
-    if (btnId.id === ruka[0]) {
+btnPlayer.forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    console.log(btn);
+    if (btn.id === ruka[0]) {
       playerChoice = 'ROCK';
       hidden();
       youPickedRock.classList.remove('hidden');
       youPickedText.textContent = 'ROCK';
-    } else if (btnId.id === ruka[1]) {
+    } else if (btn.id === ruka[1]) {
       playerChoice = 'SCISSORS';
       hidden();
       youPickedScissors.classList.remove('hidden');
       youPickedText.textContent = 'SCISSORS';
-    } else if (btnId.id === ruka[2]) {
+    } else if (btn.id === ruka[2]) {
       playerChoice = 'PAPER';
       hidden();
       youPickedPaper.classList.remove('hidden');
