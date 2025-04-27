@@ -24,49 +24,89 @@ const background = document.querySelector('.background');
 
 let seconds = 3;
 let computerPicked;
-let ruka = ['ROCK', 'SCISSORS', 'PAPER'];
+let ruka = ['rock', 'scissors', 'paper'];
 let resultScore = '';
 let scoreNumber = 0;
 let interval;
 let playerChoice = '';
 let computerChoice = ruka[Math.trunc(Math.random() * 3) + 0];
 
+const btnPlayer = document.querySelectorAll('.btn-player');
+
+btnPlayer.forEach(function (btnId) {
+  btnId.addEventListener('click', function () {
+    if (btnId.id === ruka[0]) {
+      playerChoice = 'ROCK';
+      hidden();
+      youPickedRock.classList.remove('hidden');
+      youPickedText.textContent = 'ROCK';
+    } else if (btnId.id === ruka[1]) {
+      playerChoice = 'SCISSORS';
+      hidden();
+      youPickedScissors.classList.remove('hidden');
+      youPickedText.textContent = 'SCISSORS';
+    } else if (btnId.id === ruka[2]) {
+      playerChoice = 'PAPER';
+      hidden();
+      youPickedPaper.classList.remove('hidden');
+      youPickedText.textContent = 'PAPER';
+    }
+  });
+});
+
+function timer() {
+  seconds--;
+  computerTime.textContent = seconds;
+  if (seconds === 0) {
+    if (computerChoice === 'scissors') {
+      youPickedTextTwo.textContent = 'SCISSORS';
+      computerScissors.classList.remove('hidden');
+    } else if (computerChoice === 'paper') {
+      computerPaper.classList.remove('hidden');
+      youPickedTextTwo.textContent = 'PAPER';
+    } else if (computerChoice === 'rock') {
+      computerRock.classList.remove('hidden');
+      youPickedTextTwo.textContent = 'ROCK';
+    }
+  }
+}
+
 function choosingWiner() {
-  if (playerChoice === 'PAPER' && computerChoice === 'ROCK') {
+  if (playerChoice === 'PAPER' && computerChoice === 'rock') {
     resultScore = 'YOU WIN';
     result.textContent = resultScore;
     increaseScore();
     backgroundColor(youPickedPaper, youPickedRock, youPickedScissors);
-  } else if (playerChoice === 'PAPER' && computerChoice === 'SCISSORS') {
+  } else if (playerChoice === 'PAPER' && computerChoice === 'scissors') {
     resultScore = 'YOU LOSE';
     result.textContent = resultScore;
     reducingScore();
     backgroundColor(computerPaper, computerScissors, computerRock);
-  } else if (playerChoice === 'PAPER' && computerChoice === 'PAPER') {
+  } else if (playerChoice === 'PAPER' && computerChoice === 'paper') {
     resultScore = 'DRAW';
     result.textContent = resultScore;
-  } else if (playerChoice === 'ROCK' && computerChoice === 'PAPER') {
+  } else if (playerChoice === 'ROCK' && computerChoice === 'paper') {
     resultScore = 'YOU LOSE';
     reducingScore();
     result.textContent = resultScore;
     backgroundColor(computerPaper, computerScissors, computerRock);
-  } else if (playerChoice === 'ROCK' && computerChoice === 'ROCK') {
+  } else if (playerChoice === 'ROCK' && computerChoice === 'rock') {
     resultScore = 'DRAW';
     result.textContent = resultScore;
-  } else if (playerChoice === 'ROCK' && computerChoice === 'SCISSORS') {
+  } else if (playerChoice === 'ROCK' && computerChoice === 'scissors') {
     resultScore = 'YOU WIN';
     increaseScore();
     result.textContent = resultScore;
     backgroundColor(youPickedPaper, youPickedRock, youPickedScissors);
-  } else if (playerChoice === 'SCISSORS' && computerChoice === 'SCISSORS') {
+  } else if (playerChoice === 'SCISSORS' && computerChoice === 'scissors') {
     resultScore = 'DRAW';
     result.textContent = resultScore;
-  } else if (playerChoice === 'SCISSORS' && computerChoice === 'PAPER') {
+  } else if (playerChoice === 'SCISSORS' && computerChoice === 'paper') {
     resultScore = 'YOU WIN';
     increaseScore();
     result.textContent = resultScore;
     backgroundColor(youPickedPaper, youPickedRock, youPickedScissors);
-  } else if (playerChoice === 'SCISSORS' && computerChoice === 'ROCK') {
+  } else if (playerChoice === 'SCISSORS' && computerChoice === 'rock') {
     resultScore = 'YOU LOSE';
     result.textContent = resultScore;
     reducingScore();
@@ -74,10 +114,6 @@ function choosingWiner() {
   }
 }
 btnPaper.addEventListener('click', function () {
-  playerChoice = 'PAPER';
-  hidden();
-  youPickedPaper.classList.remove('hidden');
-  youPickedText.textContent = 'PAPER';
   interval = setInterval(function () {
     timer();
     if (seconds === 0) {
@@ -87,10 +123,6 @@ btnPaper.addEventListener('click', function () {
   }, 1000);
 });
 btnScissors.addEventListener('click', function () {
-  playerChoice = 'SCISSORS';
-  hidden();
-  youPickedScissors.classList.remove('hidden');
-  youPickedText.textContent = 'SCISSORS';
   interval = setInterval(function () {
     timer();
     if (seconds === 0) {
@@ -100,10 +132,6 @@ btnScissors.addEventListener('click', function () {
   }, 1000);
 });
 btnRock.addEventListener('click', function () {
-  playerChoice = 'ROCK';
-  hidden();
-  youPickedRock.classList.remove('hidden');
-  youPickedText.textContent = 'ROCK';
   interval = setInterval(function () {
     timer();
     if (seconds === 0) {
@@ -145,20 +173,6 @@ function backgroundColorRemove(btnWinOne, btnWinTwo, btnWinerThree) {
   btnWinOne.style.boxShadow = 'none';
   btnWinTwo.style.boxShadow = 'none';
   btnWinerThree.style.boxShadow = 'none';
-}
-function timer() {
-  seconds--;
-  computerTime.textContent = seconds;
-  if (seconds === 0) {
-    if (computerChoice === 'SCISSORS') {
-      computerScissors.classList.remove('hidden');
-    } else if (computerChoice === 'PAPER') {
-      computerPaper.classList.remove('hidden');
-    } else if (computerChoice === 'ROCK') {
-      computerRock.classList.remove('hidden');
-    }
-    youPickedTextTwo.textContent = computerChoice;
-  }
 }
 btnAgain.addEventListener('click', again);
 function again() {
