@@ -35,16 +35,19 @@ function choosingWiner() {
   if (playerChoice === 'PAPER' && computerChoice === 'ROCK') {
     resultScore = 'YOU WIN';
     result.textContent = resultScore;
+    increaseScore();
     backgroundColor(youPickedPaper, youPickedRock, youPickedScissors);
   } else if (playerChoice === 'PAPER' && computerChoice === 'SCISSORS') {
     resultScore = 'YOU LOSE';
     result.textContent = resultScore;
+    reducingScore();
     backgroundColor(computerPaper, computerScissors, computerRock);
   } else if (playerChoice === 'PAPER' && computerChoice === 'PAPER') {
     resultScore = 'DRAW';
     result.textContent = resultScore;
   } else if (playerChoice === 'ROCK' && computerChoice === 'PAPER') {
     resultScore = 'YOU LOSE';
+    reducingScore();
     result.textContent = resultScore;
     backgroundColor(computerPaper, computerScissors, computerRock);
   } else if (playerChoice === 'ROCK' && computerChoice === 'ROCK') {
@@ -52,6 +55,7 @@ function choosingWiner() {
     result.textContent = resultScore;
   } else if (playerChoice === 'ROCK' && computerChoice === 'SCISSORS') {
     resultScore = 'YOU WIN';
+    increaseScore();
     result.textContent = resultScore;
     backgroundColor(youPickedPaper, youPickedRock, youPickedScissors);
   } else if (playerChoice === 'SCISSORS' && computerChoice === 'SCISSORS') {
@@ -59,11 +63,13 @@ function choosingWiner() {
     result.textContent = resultScore;
   } else if (playerChoice === 'SCISSORS' && computerChoice === 'PAPER') {
     resultScore = 'YOU WIN';
+    increaseScore();
     result.textContent = resultScore;
     backgroundColor(youPickedPaper, youPickedRock, youPickedScissors);
   } else if (playerChoice === 'SCISSORS' && computerChoice === 'ROCK') {
     resultScore = 'YOU LOSE';
     result.textContent = resultScore;
+    reducingScore();
     backgroundColor(computerPaper, computerScissors, computerRock);
   }
 }
@@ -77,7 +83,6 @@ btnPaper.addEventListener('click', function () {
     if (seconds === 0) {
       clearInterval(interval);
       choosingWiner();
-      scoring();
     }
   }, 1000);
 });
@@ -91,7 +96,6 @@ btnScissors.addEventListener('click', function () {
     if (seconds === 0) {
       clearInterval(interval);
       choosingWiner();
-      scoring();
     }
   }, 1000);
 });
@@ -105,7 +109,6 @@ btnRock.addEventListener('click', function () {
     if (seconds === 0) {
       clearInterval(interval);
       choosingWiner();
-      scoring();
     }
   }, 1000);
 });
@@ -125,17 +128,11 @@ function hidden() {
   miniBox.classList.remove('hidden');
   computerText.classList.remove('hidden');
 }
-function scoring() {
-  if (resultScore === 'YOU LOSE') {
-    scoreNumber = scoreNumber - 1;
-    score.textContent = scoreNumber;
-  } else if (resultScore === 'YOU WIN') {
-    scoreNumber = scoreNumber + 1;
-    score.textContent = scoreNumber;
-  } else {
-    score.textContent = scoreNumber;
-  }
+function increaseScore() {
+  scoreNumber = scoreNumber + 1;
+  score.textContent = scoreNumber;
 }
+
 function backgroundColor(btnWinOne, btnWinTwo, btnWinerThree) {
   btnWinOne.style.boxShadow = '0px 0px 20px 20px  #fff';
   btnWinTwo.style.boxShadow = '0px 0px 20px 20px  #fff';
